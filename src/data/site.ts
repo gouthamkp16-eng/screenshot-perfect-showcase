@@ -106,15 +106,6 @@ export const projects = [
     stack: ["Vite", "React", "Firestore", "XLSX export"],
     badge: "Industry",
   },
-  {
-    title: "Smart India Hackathon 2024 — National Winner",
-    summary:
-      "National-level win against thousands of teams — the clearest proof that what we teach holds up under pressure and deadlines.",
-    detail:
-      "Hardware, firmware and software built end-to-end by the same team that mentors our interns.",
-    stack: ["National Winner", "SIH 2024"],
-    badge: "Award",
-  },
 ];
 
 export const whyUs = [
@@ -134,9 +125,9 @@ export const whyUs = [
     blurb: "You are guided by people currently designing boards and firmware.",
   },
   {
-    icon: "trophy",
-    title: "Hackathon-Winning Track Record",
-    blurb: "Smart India Hackathon 2024 national winners on the mentoring team.",
+    icon: "layers",
+    title: "End-to-End Product Exposure",
+    blurb: "Hardware, firmware and software in one project — the way real teams ship.",
   },
   {
     icon: "shield",
@@ -153,6 +144,6 @@ export const whyUs = [
 export const stats = [
   { value: 250, suffix: "+", label: "Students Trained" },
   { value: 40, suffix: "+", label: "Projects Built" },
-  { value: 1, suffix: "", label: "National Hackathon Win" },
+  { value: 15, suffix: "+", label: "Industry Tools Taught" },
   { value: 5, suffix: "", label: "Internship Tracks" },
 ];

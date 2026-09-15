@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "motion/react";
-import { ArrowRight, Trophy } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CircuitBackground } from "@/components/site/CircuitBackground";
 import { Reveal } from "@/components/site/Reveal";
@@ -49,7 +49,7 @@ function Index() {
             className="max-w-3xl"
           >
             <span className="inline-flex items-center gap-2 rounded-full border border-mint/30 px-4 py-1.5 text-xs font-medium text-mint">
-              <Trophy className="size-3.5" /> Smart India Hackathon 2024 — National Winner
+              Robotics &amp; Embedded Systems R&amp;D Lab · Bengaluru
             </span>
             <h1 className="mt-6 text-5xl leading-[1.05] text-navy-foreground sm:text-7xl">
               Techlicious <span className="text-gradient-brand">Labs</span>

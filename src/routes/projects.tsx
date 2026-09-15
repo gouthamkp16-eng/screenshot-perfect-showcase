@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Trophy } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import { CTABanner, PageHero, ProjectGrid, StatsBar } from "@/components/site/Sections";
 

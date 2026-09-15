@@ -11,7 +11,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { navLinks } from "@/data/site";
-import logoAsset from "@/assets/tl-logo.png.asset.json";
+import logoWhiteAsset from "@/assets/tl-logo-white.png.asset.json";
 import iconAsset from "@/assets/tl-icon.png.asset.json";
 
 export function Navbar() {
@@ -27,16 +27,16 @@ export function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${
+      className={`surface-navy sticky top-0 z-50 w-full border-b transition-all duration-300 ${
         scrolled
-          ? "border-border bg-background/90 py-2 shadow-[var(--shadow-card)] backdrop-blur-md"
-          : "border-transparent bg-background/70 py-4 backdrop-blur-sm"
+          ? "border-navy-foreground/10 py-2 shadow-[var(--shadow-card)] backdrop-blur-md"
+          : "border-transparent py-4"
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center gap-4 px-4 sm:px-6">
         <Link to="/" className="flex shrink-0 items-center" aria-label="Techlicious Labs home">
           <img
-            src={scrolled ? iconAsset.url : logoAsset.url}
+            src={scrolled ? iconAsset.url : logoWhiteAsset.url}
             alt="Techlicious Labs"
             className={`w-auto transition-all duration-300 ${scrolled ? "h-9" : "h-10 sm:h-11"}`}
           />
@@ -48,8 +48,8 @@ export function Navbar() {
             <li key={link.to}>
               <Link
                 to={link.to}
-                className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
-                activeProps={{ className: "text-primary bg-secondary" }}
+                className="rounded-md px-3 py-2 text-sm font-medium text-navy-foreground/70 transition-colors hover:bg-navy-foreground/10 hover:text-navy-foreground"
+                activeProps={{ className: "text-mint bg-navy-foreground/10" }}
                 activeOptions={{ exact: link.to === "/" }}
               >
                 {link.label}
@@ -64,7 +64,7 @@ export function Navbar() {
             <Link to="/contact">Apply Now</Link>
           </Button>
           <button
-            className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border lg:hidden"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-navy-foreground/25 text-navy-foreground lg:hidden"
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle menu"
           >
@@ -74,15 +74,15 @@ export function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-border bg-background lg:hidden">
+        <div className="surface-navy border-t border-navy-foreground/10 lg:hidden">
           <ul className="mx-auto flex max-w-7xl flex-col px-4 py-2 sm:px-6">
             {navLinks.map((link) => (
               <li key={link.to}>
                 <Link
                   to={link.to}
                   onClick={() => setOpen(false)}
-                  className="block rounded-md px-2 py-3 text-sm font-medium text-foreground"
-                  activeProps={{ className: "text-primary" }}
+                  className="block rounded-md px-2 py-3 text-sm font-medium text-navy-foreground"
+                  activeProps={{ className: "text-mint" }}
                   activeOptions={{ exact: link.to === "/" }}
                 >
                   {link.label}
@@ -107,7 +107,11 @@ function SignInDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="ghost" size="default" className="text-sm">
+        <Button
+          variant="ghost"
+          size="default"
+          className="text-sm text-navy-foreground hover:bg-navy-foreground/10 hover:text-navy-foreground"
+        >
           Sign In
         </Button>
       </DialogTrigger>

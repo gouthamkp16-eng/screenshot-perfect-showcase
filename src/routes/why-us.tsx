@@ -11,7 +11,7 @@ import { socials } from "@/data/site";
 
 const title = "Why Techlicious Labs — Real Hardware, Real Mentors";
 const description =
-  "Industry-standard tools, mentorship from practicing engineers, defence-grade PCB experience, a national hackathon win and project-based certification.";
+  "Industry-standard tools, mentorship from practicing engineers, defence-grade PCB experience and project-based certification.";
 
 export const Route = createFileRoute("/why-us")({
   head: () => ({
